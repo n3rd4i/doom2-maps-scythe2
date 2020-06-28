@@ -8,19 +8,19 @@
     <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
-    <id>doom2-maps-scyte2</id>
+    <id>doom2-maps-scythe2</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>25.03.2005</version>
-    <packageSourceUrl>https://github.com/n3rd4i/doom2-maps-scyte2</packageSourceUrl>
+    <packageSourceUrl>https://github.com/n3rd4i/doom2-maps-scythe2</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>n3rd4i</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>doom2-maps-scyte2 (Install)</title>
+    <title>Scythe2 (Doom2 Maps)</title>
     <authors>Erik Alm</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://doomwiki.org/wiki/Scythe_2</projectUrl>
@@ -33,7 +33,7 @@
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>doom2-maps-scyte2 maps doom2 wad</tags>
+    <tags>doom2-maps-scythe2 maps doom2 wad</tags>
     <summary>doom2 maps</summary>
     <description>
 
@@ -44,14 +44,9 @@ Scythe 2 is a 32-level megawad for Doom II. Released by Erik Alm in June of 2005
     <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="freedoom" version="0.12.1"/>
+    </dependencies>
     <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
          - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
          - You want to use Get-PackageParameters and on less than 0.11.0
