@@ -1,6 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
-<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -12,7 +10,7 @@
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>25.03.2005</version>
+    <version>25.03.2005.20200705</version>
     <packageSourceUrl>https://github.com/n3rd4i/doom2-maps-scyte2</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>n3rd4i</owners>
@@ -20,11 +18,10 @@
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>doom2-maps-scyte2 (Install)</title>
+    <title>[Deprecated] doom2-maps-scyte2 (Install)</title>
     <authors>Erik Alm</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://doomwiki.org/wiki/Scythe_2</projectUrl>
-    <iconUrl>https://cdn.statically.io/img/upload.wikimedia.org/wikipedia/en/2/29/Doom_II_-_Hell_on_Earth_Coverart.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
@@ -37,34 +34,19 @@
     <summary>doom2 maps</summary>
     <description>
 
-Scythe 2 is a 32-level megawad for Doom II. Released by Erik Alm in June of 2005. It was re-released July 10th 2009 with the three missing levels. It has been regarded by many as a spiritual successor to Scythe rather than a direct sequel. While the original featured small, action-packed levels, Scythe 2 is filled with large, complex and detailed maps, and is sometimes compared to the style of Alien Vendetta.
+Package is deprecated because the package name is incorrect compared to underlying SW.
+
+Should be replaced [superseded] with `doom2-maps-scythe2`
 
      </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
-    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
-         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
-         - You want to use Get-PackageParameters and on less than 0.11.0
-         - You want to take advantage of other functions in the core community maintainer's team extension package
-    -->
+    <dependencies>
+      <dependency id="doom2-maps-scythe2" />
+    </dependencies>
 
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
   </metadata>
-  <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
-    <file src="tools\**" target="tools" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
-  </files>
+  <files />
 </package>
